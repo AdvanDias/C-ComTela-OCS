@@ -1,0 +1,17 @@
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\Formulario.exe
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\tessdata\por.traineddata
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\x86\leptonica-1.80.0.dll
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\x86\tesseract41.dll
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\x64\leptonica-1.80.0.dll
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\x64\tesseract41.dll
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\Formulario.exe.config
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\Tesseract.dll
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.csprojAssemblyReference.cache
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.Form1.resources
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.Properties.Resources.resources
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.csproj.GenerateResource.cache
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.csproj.CoreCompileInputs.cache
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.csproj.CopyComplete
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.exe
+C:\Users\Advan\source\repos\Formulario\Formulario\obj\Debug\Formulario.pdb
+C:\Users\Advan\source\repos\Formulario\Formulario\bin\Debug\Formulario.pdb
