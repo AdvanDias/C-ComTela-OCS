@@ -42,7 +42,6 @@ namespace Formulario
             this.tb_OCSS = new System.Windows.Forms.TextBox();
             this.btn_OCS = new System.Windows.Forms.Button();
             this.btn_incluir = new System.Windows.Forms.Button();
-            this.lb_testando = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_Codigo
@@ -65,7 +64,7 @@ namespace Formulario
             // lb_produto
             // 
             this.lb_produto.AutoSize = true;
-            this.lb_produto.Location = new System.Drawing.Point(12, 191);
+            this.lb_produto.Location = new System.Drawing.Point(162, 18);
             this.lb_produto.Name = "lb_produto";
             this.lb_produto.Size = new System.Drawing.Size(44, 13);
             this.lb_produto.TabIndex = 4;
@@ -74,7 +73,7 @@ namespace Formulario
             // lb_Qntd
             // 
             this.lb_Qntd.AutoSize = true;
-            this.lb_Qntd.Location = new System.Drawing.Point(285, 191);
+            this.lb_Qntd.Location = new System.Drawing.Point(9, 88);
             this.lb_Qntd.Name = "lb_Qntd";
             this.lb_Qntd.Size = new System.Drawing.Size(30, 13);
             this.lb_Qntd.TabIndex = 5;
@@ -83,7 +82,7 @@ namespace Formulario
             // tb_Produto
             // 
             this.tb_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Produto.Location = new System.Drawing.Point(15, 221);
+            this.tb_Produto.Location = new System.Drawing.Point(165, 48);
             this.tb_Produto.Name = "tb_Produto";
             this.tb_Produto.Size = new System.Drawing.Size(244, 26);
             this.tb_Produto.TabIndex = 6;
@@ -91,14 +90,14 @@ namespace Formulario
             // tb_Qntd
             // 
             this.tb_Qntd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Qntd.Location = new System.Drawing.Point(288, 221);
+            this.tb_Qntd.Location = new System.Drawing.Point(12, 113);
             this.tb_Qntd.Name = "tb_Qntd";
             this.tb_Qntd.Size = new System.Drawing.Size(124, 26);
             this.tb_Qntd.TabIndex = 7;
             // 
             // btn_Consultar
             // 
-            this.btn_Consultar.Location = new System.Drawing.Point(15, 118);
+            this.btn_Consultar.Location = new System.Drawing.Point(12, 191);
             this.btn_Consultar.Name = "btn_Consultar";
             this.btn_Consultar.Size = new System.Drawing.Size(121, 35);
             this.btn_Consultar.TabIndex = 8;
@@ -108,7 +107,7 @@ namespace Formulario
             // 
             // btn_Cadastra
             // 
-            this.btn_Cadastra.Location = new System.Drawing.Point(165, 118);
+            this.btn_Cadastra.Location = new System.Drawing.Point(165, 191);
             this.btn_Cadastra.Name = "btn_Cadastra";
             this.btn_Cadastra.Size = new System.Drawing.Size(121, 35);
             this.btn_Cadastra.TabIndex = 9;
@@ -118,18 +117,19 @@ namespace Formulario
             // 
             // btn_Alterar
             // 
-            this.btn_Alterar.Location = new System.Drawing.Point(314, 118);
+            this.btn_Alterar.Location = new System.Drawing.Point(316, 191);
             this.btn_Alterar.Name = "btn_Alterar";
             this.btn_Alterar.Size = new System.Drawing.Size(121, 35);
             this.btn_Alterar.TabIndex = 10;
             this.btn_Alterar.Text = "Alterar";
             this.btn_Alterar.UseVisualStyleBackColor = true;
+            this.btn_Alterar.Click += new System.EventHandler(this.btn_Alterar_Click);
             // 
             // lb_info
             // 
             this.lb_info.AutoSize = true;
             this.lb_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_info.Location = new System.Drawing.Point(161, 54);
+            this.lb_info.Location = new System.Drawing.Point(180, 116);
             this.lb_info.Name = "lb_info";
             this.lb_info.Size = new System.Drawing.Size(148, 20);
             this.lb_info.TabIndex = 11;
@@ -163,21 +163,11 @@ namespace Formulario
             this.btn_incluir.UseVisualStyleBackColor = true;
             this.btn_incluir.Click += new System.EventHandler(this.btn_incluir_Click);
             // 
-            // lb_testando
-            // 
-            this.lb_testando.AutoSize = true;
-            this.lb_testando.Location = new System.Drawing.Point(44, 364);
-            this.lb_testando.Name = "lb_testando";
-            this.lb_testando.Size = new System.Drawing.Size(34, 13);
-            this.lb_testando.TabIndex = 15;
-            this.lb_testando.Text = "Texte";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lb_testando);
             this.Controls.Add(this.btn_incluir);
             this.Controls.Add(this.btn_OCS);
             this.Controls.Add(this.tb_OCSS);
@@ -213,7 +203,6 @@ namespace Formulario
         private System.Windows.Forms.TextBox tb_OCSS;
         private System.Windows.Forms.Button btn_OCS;
         private System.Windows.Forms.Button btn_incluir;
-        private System.Windows.Forms.Label lb_testando;
     }
 }
 

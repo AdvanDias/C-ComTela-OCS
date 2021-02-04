@@ -14,6 +14,7 @@ namespace Formulario
         int y = 0;
         int a = 1;
         int numero = 0;
+        int limite = 3;
 
         string[,] nomes = new string[5, 3];
         ArrayList arr = new ArrayList();
@@ -83,27 +84,7 @@ namespace Formulario
                 }
             }
 
-            /*
-                        if (arr.Count == 0)
-                        {
-                            lb_info.Text = "Não Encontrado";
-
-                        }
-                        else {
-                            for (int i = 0; i < arr.Count; i++)
-                            {
-                                if (tb_Codigo.Text == arr[i].ToString())
-                                {
-                                    lb_info.Text = tb_Codigo.Text;
-                                    break;
-                                }
-                                else
-                                {
-                                    lb_info.Text = "Não Encontrado";
-                                }
-                            }
-                        }
-            */
+           
 
         }
 
@@ -145,52 +126,64 @@ namespace Formulario
         private void btn_OCS_Click(object sender, EventArgs e)
         {
             Ocstesseract meu = new Ocstesseract();
-
-            tb_OCSS.Text = meu.sovai();
+            TrataTexo trataTexo = new TrataTexo();
+            var textotratado = trataTexo.TratandoOtexto(meu.sovai());
+            tb_OCSS.Text = textotratado;
         }
 
         private void btn_incluir_Click(object sender, EventArgs e)
         {
             List<string> result = tb_OCSS.Text.Split(';', '\n').ToList();
-
-            if (result[numero].Contains("UND"))
+            if (tb_OCSS.Text == "")
             {
-                var x = result[numero].IndexOf('-');
-                tb_Qntd.Text = result[numero].Substring(x + 1);
+                lb_info.Text = "NÃO HÁ REGISTROS NA TABELA";
             }
-            else if (result[numero] == null)
+            else
             {
-                tb_Qntd.Text = "Vazio";
-            }
+                for (int i = numero; i < limite; i++)
+                {
+                    if (limite > result.Count())
+                    {
+                        lb_info.Text = "NÃO HÁ MAIS REGISTROS A SEREM INCLUIDOS";
+                        limite = result.Count();
+                        break;
+                    }
+                    else
+                    {
+                        var item = result[i].IndexOf("-");
+                        var condicao = result[i].Substring(0, item);
+                        switch (condicao)
+                        {
+                            case "1":
+                                var inicio1 = result[i].IndexOf("=");
+                                var final1 = result[i].Substring(inicio1 + 1);
+                                tb_Qntd.Text = final1;
+                                break;
+                            case "2":
+                                var inicio2 = result[i].IndexOf("=");
+                                var final2 = result[i].Substring(inicio2 + 1);
+                                tb_Codigo.Text = final2;
+                                break;
+                            case "3":
+                                var inicio3 = result[i].IndexOf("=");
+                                var final3 = result[i].Substring(inicio3 + 1);
+                                tb_Produto.Text = final3;
+                                break;
+                        }
+                    }
+                    lb_info.Text = "";
+                }
 
+                numero = numero + 3;
+                limite = limite + 3;
+                
 
+            }
+            
+        }
 
-            if (result[numero].Contains("COD"))
-            {
-                var x = result[numero].IndexOf('-');
-                tb_Codigo.Text = result[numero].Substring(x + 1);
-            }
-            else if (result[numero] == null)
-            {
-                tb_Codigo.Text = "Vazio";
-            }
-
-
-            if (result[numero].Contains("DESC"))
-            {
-                var x = result[numero].IndexOf('-');
-                tb_Produto.Text = result[numero].Substring(x + 1);
-            }
-            else if (result[numero] == null)
-            {
-                tb_Produto.Text = "Vazio";
-            }
-
-            if (tb_Codigo.Text != "" && tb_Produto.Text != "" && tb_Qntd.Text != "")
-            {
-                lb_testando.Text = "ASKJDGKJASDHKJASHasdasdasdasdasdDFKJASHFKJSDHKJFHSDK";
-            }
-            numero++;
+        private void btn_Alterar_Click(object sender, EventArgs e)
+        {
 
         }
     }

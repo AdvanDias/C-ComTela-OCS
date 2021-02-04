@@ -7,7 +7,7 @@ namespace Formulario
 {
     class Ocstesseract
     {
-        string pathimage = @"C:\Users\Advan\source\repos\OCR_Demo\OCR_Demo\nota02.jpeg";
+        string pathimage = @"C:\Users\Advan\source\repos\OCR_Demo\OCR_Demo\2nota22.jpeg";
         string text = "";
         List<string> tabela2 = new List<string>();
         string mandar = "";
@@ -42,15 +42,15 @@ namespace Formulario
 
                 if (result[i].Contains("789"))
                 {
-                    tabela2.Add("COD-" + result[i]);
+                    tabela2.Add("2-COD=" + result[i]);
                 }
                 if (result[i] == "DORALFLEX" || result[i] == "TORSILAX" || result[i] == "MASCARA")
                 {
-                    tabela2.Add("DESC-" + result[i]);
+                    tabela2.Add("3-DESC=" + result[i]);
                 }
                 if (result[i] == "UND")
                 {
-                    tabela2.Add("UND-" + result[i - 1]);
+                    tabela2.Add("1-UND=" + result[i - 1]);
                 }
 
             }
