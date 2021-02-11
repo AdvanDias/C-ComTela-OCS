@@ -1,1 +1,1 @@
-# C-ComTela-OCS
+# C Sharp Usando OCR - Optical Character Recognition
